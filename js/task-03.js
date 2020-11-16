@@ -20,7 +20,17 @@ const images = [
 const inerPhoto = document.querySelector('.title')
 console.log(inerPhoto)
 
-const newOne = images.map(image =>{
- return document.querySelector('.title').insertAdjacentHTML('beforeEnd', `<li><img src="${image.url}" alt="${image.alt}" width="600" height="350px"></li>`);
-})
+const newOne = ({url, alt}) =>
+  `<li><img src="${url}" alt="${alt}" width="600" height="350px"></li>`;
+
+  const galleryNext = images.reduce(
+       (acc, item) => acc + newOne(item),
+       ""
+     );
  
+const gallery = document.querySelector("#gallery");
+gallery.insertAdjacentHTML("afterbegin", galleryMarkup);
+gallery.setAttribute("style", "list-style-type:none; display: flex;");
+
+
+

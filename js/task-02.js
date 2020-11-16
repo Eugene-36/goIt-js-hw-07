@@ -9,16 +9,14 @@ const ingredients = [
   ];
 
 
-const listingredients = document.querySelector('#ingredients');                         
 
+const ingredientsList = document.getElementById("ingredients");
+console.log(ingredientsList)
 
-const creatListIngredients = (ingredient) => {
-    const creatLi = document.createElement('li')
-    creatLi.textContent = ingredient;
-    listingredients.appendChild(creatLi)
-    return creatLi;
-}
+const ingredientsItems = ingredients.map((el) => {
+  const item = document.createElement("li");
+  item.textContent = el;
+  return item;
+});
 
-console.log(creatListIngredients(...ingredients));
-
-ingredients.map(ingredient => creatListIngredients(ingredient))
+ingredientsList.append(...ingredientsItems);

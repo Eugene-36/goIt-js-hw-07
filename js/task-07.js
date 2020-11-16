@@ -1,6 +1,4 @@
 
-
-
 const inputRef = document.querySelector('#font-size-control')
 console.dir(inputRef)
 
