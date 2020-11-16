@@ -29,7 +29,7 @@ const newOne = ({url, alt}) =>
      );
  
 const gallery = document.querySelector("#gallery");
-gallery.insertAdjacentHTML("afterbegin", galleryMarkup);
+gallery.insertAdjacentHTML("afterbegin", galleryNext);
 gallery.setAttribute("style", "list-style-type:none; display: flex;");
 
 
